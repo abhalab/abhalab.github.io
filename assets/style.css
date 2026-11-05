@@ -391,3 +391,4 @@ a.card:hover, .card.hover:hover { border-color: var(--glow); box-shadow: var(--s
 .foot-base { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding: 20px 0 28px; border-top: 1px solid var(--rule); font-size: .88rem; }
 .foot-base p { margin: 0; color: var(--faint); }
 .foot-base a { color: var(--muted); text-decoration: underline; }
+.venue-note { flex-basis: 100%; margin: 0; font-size: .95rem; color: var(--muted); }

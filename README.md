@@ -39,7 +39,7 @@ If you use a different org name, change `abha-lab.github.io` in steps 1, 2 and 4
 
 ## Before going live
 
-- [ ] People page: replace the "AM" initials with a photo if you want (`assets/abhi.jpg` + an `<img>`), and check the bio.
+- [ ] People page: check the bio.
 - [ ] People page: check the collaborators' affiliations are current.
 - [ ] Join page: check the PhD/MTech wording matches IIT Jammu's current admission process.
 - [ ] Ask IIT Jammu IT for `abha.iitjammu.ac.in` → CNAME to `abha-lab.github.io` or a redirect to `abha-lab.in`.
