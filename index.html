@@ -5,37 +5,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ABHA Lab — Anonymity for Bharat | IIT Jammu</title>
 <meta name="description" content="ABHA Lab at IIT Jammu studies privacy and security in the Indian context: mobility data, wireless tracking, anonymisation and network security.">
+<meta name="theme-color" content="#0F1830">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="topbar on-band">
+  <div class="wrap">
+    <span>Department of Computer Science and Engineering · <a href="https://www.iitjammu.ac.in/">Indian Institute of Technology Jammu</a></span>
+    <a class="contact" href="mailto:join@abha-lab.in">join@abha-lab.in</a>
+  </div>
+</div>
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="index.html"><b>ABHA Lab</b><span lang="hi">आभा</span></a>
+    <a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><polygon points="16,2 28.1,9 28.1,23 16,30 3.9,23 3.9,9"/><circle cx="16" cy="16" r="5"/></svg><span class="brand-text"><b>ABHA Lab</b><small>Anonymity for Bharat · <span lang="hi">आभा</span></small></span></a>
     <nav class="site-nav" aria-label="Main">
       <ul>
         <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="research.html">Research</a></li>
         <li><a href="people.html">People</a></li>
         <li><a href="publications.html">Publications</a></li>
-        <li><a href="join.html">Join us</a></li>
+        <li><a href="news.html">News</a></li>
+        <li class="nav-cta"><a href="join.html">Join us</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <main id="main">
-  <section class="hero">
-    <div class="wrap">
-      <div>
-        <h1 class="hero-name">ABHA Lab <span class="dev" lang="hi">आभा</span></h1>
-        <p class="hero-expansion">Anonymity for Bharat</p>
-        <p class="hero-lede">We study how personal data leaks from the systems India runs on — transport and mobility records, phones and wireless devices, health data, payments — and we build protections that hold up when someone actually tries to break them.</p>
-        <p>A privacy and security research group in the Department of Computer Science and Engineering, IIT Jammu.</p>
+<section class="hero on-band">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Privacy &amp; Security Research · IIT Jammu</span>
+      <h1 class="hero-name">ABHA Lab<span class="dev" lang="hi">आभा</span></h1>
+      <p class="hero-expansion">Anonymity for Bharat</p>
+      <p class="hero-lede">We study how personal data leaks from the systems India runs on — transport and mobility records, phones and wireless devices, health data, payments — and we build protections that hold up when someone actually tries to break them.</p>
+      <p class="hero-affil">A research group in the Department of Computer Science and Engineering, IIT Jammu.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="research.html">Explore our research</a>
+        <a class="btn btn-ghost" href="join.html">We're recruiting</a>
       </div>
-      <figure>
-        <svg class="hexfield" viewBox="0 0 599 316" role="img" aria-labelledby="hexfield-title"><title id="hexfield-title">A single trajectory crossing a hexagonal city grid</title>
+    </div>
+    <figure>
+      <svg class="hexfield" viewBox="0 0 599 316" role="img" aria-labelledby="hexfield-title"><title id="hexfield-title">A single trajectory crossing a hexagonal city grid</title>
 <g class="hx-grid">
 <polygon points="42.1,15.0 42.1,37.0 23.1,48.0 4.0,37.0 4.0,15.0 23.1,4.0"/>
 <polygon points="80.2,15.0 80.2,37.0 61.2,48.0 42.1,37.0 42.1,15.0 61.2,4.0"/>
@@ -188,54 +201,136 @@
 <polygon points="556.5,114.0 556.5,136.0 537.5,147.0 518.4,136.0 518.4,114.0 537.5,103.0"/>
 </g><path class="hx-path" d="M61.2 224.0 L99.3 224.0 L156.4 191.0 L194.5 191.0 L213.6 158.0 L251.7 158.0 L289.8 158.0 L346.9 125.0 L385.1 125.0 L404.1 92.0 L442.2 92.0 L499.4 125.0 L537.5 125.0" pathLength="1"/>
 <circle class="hx-end" cx="61.2" cy="224.0" r="5"/><circle class="hx-end hx-dest" cx="537.5" cy="125.0" r="5"/></svg>
-        <figcaption>One journey across a city grid. A handful of cells like these is often enough to single out one person in a dataset that was published as “anonymous”.</figcaption>
-      </figure>
-    </div>
-  </section>
+      <figcaption>One journey across a city grid. A handful of cells like these is often enough to single out one person in a dataset that was published as “anonymous”.</figcaption>
+    </figure>
+  </div>
+</section>
 
-  <section>
-    <div class="wrap">
-      <h2>What we work on</h2>
-      <div class="themes">
-        <div class="theme">
-          <h3>Mobility and location data</h3>
-          <p>Re-identifying people in released trajectory and origin–destination data, and building anonymisation that scales to millions of users.</p>
-        </div>
-        <div class="theme">
-          <h3>Wireless tracking</h3>
-          <p>How Wi-Fi, Bluetooth and LoRaWAN devices give away identity and location, and how people can detect trackers aimed at them.</p>
-        </div>
-        <div class="theme">
-          <h3>Anonymisation that holds up</h3>
-          <p>Testing whether privacy claims survive real attacks, and turning the results into guidance for data publishers and regulators.</p>
-        </div>
-        <div class="theme">
-          <h3>Network and IoT security</h3>
-          <p>Measuring what devices and attackers actually do on the network, from DNS in smart homes to scanning on the open web.</p>
-        </div>
-      </div>
-      <p style="margin-top:24px"><a href="research.html">More about our research</a></p>
-    </div>
-  </section>
+<div class="venues">
+  <div class="wrap">
+    <span class="label">Recent work at</span>
+    <ul><li>PoPETs</li><li>IEEE INFOCOM</li><li>ACM AsiaCCS</li><li>ACM WiSec</li><li>ACM CCS</li><li>IEEE IoT Journal</li></ul>
+  </div>
+</div>
 
-  <section>
-    <div class="wrap">
-      <h2>News</h2>
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Research</span><h2>What we work on</h2>
+      <p>Four themes, one method: attack real systems and data releases, then build defences against what worked.</p></div>
+      <a class="more" href="research.html">All research themes →</a>
+    </div>
+    <div class="cards four">
+    <a class="card" href="research.html#mob">
+      <div class="card-top"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9 12l5 3 6-9"/><circle cx="4" cy="18" r="2"/><circle cx="20" cy="6" r="2"/></svg></span><span class="num">01</span></div>
+      <h3>Mobility and location data</h3>
+      <p>Re-identifying people in released trajectory and origin–destination data, and building anonymisation that scales to millions of users.</p>
+      <span class="more">Read more →</span>
+    </a>
+    <a class="card" href="research.html#wl">
+      <div class="card-top"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="18" r="1.6"/><path d="M8.6 14.4a4.8 4.8 0 0 1 6.8 0M5.6 11.4a9 9 0 0 1 12.8 0M2.6 8.4a13.2 13.2 0 0 1 18.8 0"/></svg></span><span class="num">02</span></div>
+      <h3>Wireless tracking</h3>
+      <p>How Wi-Fi, Bluetooth and LoRaWAN devices give away identity and location, and how people can detect trackers aimed at them.</p>
+      <span class="more">Read more →</span>
+    </a>
+    <a class="card" href="research.html#anon">
+      <div class="card-top"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.6-3 8.2-7 10-4-1.8-7-5.4-7-10V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></span><span class="num">03</span></div>
+      <h3>Anonymisation that holds up</h3>
+      <p>Testing whether privacy claims survive real attacks, and turning the results into guidance for data publishers and regulators.</p>
+      <span class="more">Read more →</span>
+    </a>
+    <a class="card" href="research.html#net">
+      <div class="card-top"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M7 6h10M6.1 7.8l4.8 8.4M17.9 7.8l-4.8 8.4"/></svg></span><span class="num">04</span></div>
+      <h3>Network and IoT security</h3>
+      <p>Measuring what devices and attackers actually do on the network, from DNS in smart homes to scanning on the open web.</p>
+      <span class="more">Read more →</span>
+    </a>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap grid-2">
+    <div>
+      <div class="sec-head"><div><span class="eyebrow">Updates</span><h2>Latest news</h2></div><a class="more" href="news.html">All news →</a></div>
       <ul class="news">
-        <li><time datetime="2026-11">Nov 2026</time><span>ABHA Lab starts at IIT Jammu. We are recruiting PhD, MTech and BTech students — <a href="join.html">see openings</a>.</span></li>
-        <li><time datetime="2026">2026</time><span><em>AirCatch: Effectively tracing advanced tag-based trackers</em> accepted to PoPETs 2027.</span></li>
-        <li><time datetime="2026">2026</time><span><em>k-scale: k-Anonymizing Millions of Trajectories</em> published at IEEE INFOCOM 2026.</span></li>
-        <li><time datetime="2026">2026</time><span><em>How Tough Is Location Anonymization? Re-identifying 100K Real-User Trajectories in Japan</em> published at ACM AsiaCCS 2026.</span></li>
-        <li><time datetime="2026">2026</time><span><em>StateFi: Effectively Identifying Wi-Fi Devices through State Transitions</em> published at ACM WiSec 2026.</span></li>
+<li><time datetime="2026-11">Nov 2026</time><div><span class="pill pill-glow">Lab</span>ABHA Lab starts at IIT Jammu. We are recruiting PhD, MTech and BTech students — <a href="join.html">see openings</a>.</div></li>
+<li><time datetime="2026">2026</time><div><span class="pill">Paper</span><a href="publications.html#aircatch"><em>AirCatch: Effectively tracing advanced tag-based trackers</em></a> accepted to PoPETs 2027.</div></li>
+<li><time datetime="2026">2026</time><div><span class="pill">Paper</span><a href="publications.html#k-scale"><em>k-scale: k-Anonymizing Millions of Trajectories</em></a> published at IEEE INFOCOM 2026.</div></li>
+<li><time datetime="2026">2026</time><div><span class="pill">Paper</span><a href="publications.html#location-anonymization-japan"><em>How Tough Is Location Anonymization? Re-identifying 100K Real-User Trajectories in Japan</em></a> published at ACM AsiaCCS 2026.</div></li>
+<li><time datetime="2026">2026</time><div><span class="pill">Paper</span><a href="publications.html#statefi"><em>StateFi: Effectively Identifying Wi-Fi Devices through State Transitions</em></a> published at ACM WiSec 2026.</div></li>
       </ul>
     </div>
-  </section>
+    <div>
+      <div class="sec-head"><div><span class="eyebrow">Publications</span><h2>Selected papers</h2></div><a class="more" href="publications.html">All publications →</a></div>
+      <ol class="pubs compact">
+<li class="pub t-wl">
+  <div class="pub-badge"><b>PoPETs</b><span>2027</span></div>
+  <div><span class="pub-title"><a href="publications.html#aircatch">AirCatch: Effectively tracing advanced tag-based trackers</a></span><span class="pub-authors"><span class="me">Abhishek Kumar Mishra</span>, Swadeep, Guevara Noubir, Mathieu Cunche</span><span class="pub-venue">Proceedings on Privacy Enhancing Technologies (<em>PoPETs</em>), 2027, to appear.</span><div class="pub-meta"><a href="https://doi.org/10.48550/arXiv.2602.07656">arXiv</a></div></div>
+</li>
+<li class="pub t-mob t-anon">
+  <div class="pub-badge"><b>INFOCOM</b><span>2026</span></div>
+  <div><span class="pub-title"><a href="publications.html#k-scale">k-scale: k-Anonymizing Millions of Trajectories</a></span><span class="pub-authors"><span class="me">Abhishek Kumar Mishra</span>, Marco Fiore</span><span class="pub-venue"><em>IEEE INFOCOM</em>, 2026.</span><div class="pub-meta"><a href="https://doi.org/10.1109/INFOCOM59046.2026.11571660">DOI</a></div></div>
+</li>
+<li class="pub t-mob t-anon">
+  <div class="pub-badge"><b>AsiaCCS</b><span>2026</span></div>
+  <div><span class="pub-title"><a href="publications.html#location-anonymization-japan">How Tough Is Location Anonymization? Re-identifying 100K Real-User Trajectories in Japan</a></span><span class="pub-authors"><span class="me">Abhishek Kumar Mishra</span>, Mathieu Cunche, Héber Hwang Arcolezi</span><span class="pub-venue"><em>ACM Asia Conference on Computer and Communications Security (AsiaCCS)</em>, 2026.</span><div class="pub-meta"><a href="https://doi.org/10.1145/3779208.3805978">DOI</a></div></div>
+</li>
+<li class="pub t-wl">
+  <div class="pub-badge"><b>WiSec</b><span>2026</span></div>
+  <div><span class="pub-title"><a href="publications.html#statefi">StateFi: Effectively Identifying Wi-Fi Devices through State Transitions</a></span><span class="pub-authors"><span class="me">Abhishek Kumar Mishra</span>, Mathieu Cunche</span><span class="pub-venue"><em>ACM Conference on Security and Privacy in Wireless and Mobile Networks (WiSec)</em>, 2026.</span><div class="pub-meta"><a href="https://doi.org/10.1145/3765613.3797454">DOI</a></div></div>
+</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cta on-band">
+      <div>
+        <span class="eyebrow">Join us</span>
+        <h2>Help build a new lab from the ground up</h2>
+        <p>We're recruiting PhD, MTech and BTech students who like taking systems apart. Early members shape what the group becomes.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="join.html">See openings</a>
+        <a class="btn btn-ghost" href="people.html">Meet the team</a>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
 
-<footer class="site-foot">
-  <div class="wrap">
-    <p>ABHA Lab, Department of Computer Science and Engineering<br>IIT Jammu, Jagti, PO Nagrota, NH-44, Jammu 181221</p>
-    <p><a href="mailto:join@abha-lab.in">join@abha-lab.in</a><br><a href="privacy.html">How this site handles your data</a></p>
+<footer class="site-foot on-band">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><polygon points="16,2 28.1,9 28.1,23 16,30 3.9,23 3.9,9"/><circle cx="16" cy="16" r="5"/></svg><span class="brand-text"><b>ABHA Lab</b><small>Anonymity for Bharat · <span lang="hi">आभा</span></small></span></a>
+      <p>Privacy and security research for the systems India runs on.</p>
+      <address>Department of Computer Science and Engineering<br>Indian Institute of Technology Jammu<br>Jagti, PO Nagrota, NH-44, Jammu 181221, India</address>
+    </div>
+    <nav aria-label="Footer">
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="join.html">Join us</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="mailto:join@abha-lab.in">join@abha-lab.in</a></li>
+        <li><a href="https://orcid.org/0000-0003-1778-6794">ORCID</a></li>
+        <li><a href="https://github.com/miishra">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-base">
+    <p>© 2026 ABHA Lab, IIT Jammu</p>
+    <p>No cookies, no analytics, no third-party requests. <a href="privacy.html">How this site handles your data</a></p>
   </div>
 </footer>
 </body>

@@ -3,11 +3,12 @@
 Hand-written static site: plain HTML and one CSS file. No build step, no JavaScript, no external requests (fonts are self-hosted).
 
 ```
-index.html          Home: hero, themes, news
-research.html       Themes in detail, "Why Bharat", collaborators
-people.html         PI + students
-publications.html   Full list, grouped by year
-join.html           Openings and how to apply
+index.html          Home: hero, venue strip, theme cards, latest news, selected papers, recruiting banner
+research.html       Approach, "Why Bharat", themes with representative papers, collaborating institutions
+people.html         PI profile, student slots, collaborators
+publications.html   Full list by year, topic filter (CSS only), jump-to-year sidebar
+news.html           Full news archive, grouped by year
+join.html           Openings, how to apply, FAQ
 privacy.html        What the site does (and doesn't) collect
 404.html            Not-found page
 CNAME               abha-lab.in (tells GitHub Pages your domain)
@@ -40,14 +41,16 @@ If you use a different org name, change `abha-lab.github.io` in steps 1, 2 and 4
 
 - [ ] Set up email forwarding for `join@abha-lab.in` at your registrar (used on every page).
 - [ ] People page: replace the "AM" initials with a photo if you want (`assets/abhi.jpg` + an `<img>`), and check the bio.
+- [ ] People page: check the collaborators' affiliations are current.
 - [ ] Join page: check the PhD/MTech wording matches IIT Jammu's current admission process.
 - [ ] Ask IIT Jammu IT for `abha.iitjammu.ac.in` → CNAME to `abha-lab.github.io` or a redirect to `abha-lab.in`.
 
 ## Editing
 
-- **Add news:** copy one `<li>` in the News list in `index.html`; newest first.
-- **Add a paper:** copy one `<li>` in `publications.html` under the right year. Wrap your name in `<span class="me">`.
-- **Add a student:** copy the `.person` block in `people.html` into the Students section and delete the empty note.
+- **Add news:** copy one `<li>` in `news.html` (newest first). If it belongs on the home page, copy it into the "Latest news" list in `index.html` too and drop the oldest one (keep about five). Tags are `<span class="pill">Paper</span>`; use `pill pill-glow` for lab announcements.
+- **Add a paper:** copy one `<li class="pub ...">` in `publications.html` under the right year, and give it a unique `id`. Topic classes drive the filter: `t-mob` (mobility), `t-wl` (wireless), `t-anon` (anonymisation), `t-net` (network & IoT); add matching `<span class="pill">` tags. Wrap your name in `<span class="me">`. Update the counts in the filter chips, the year sidebar and the total.
+- **Add a student:** in `people.html`, copy the commented member-card template into the `.members` list. Remove an "Open" card once that position is filled.
+- **Add a photo:** put it in `assets/` and replace the initials inside `.hexavatar` with `<img src="assets/name.jpg" alt="">`.
 - **New page:** copy `privacy.html`, change the `<title>`, the `aria-current` link and the `<main>` content, then add it to the nav in every page.
 
 Header and footer are repeated in each file on purpose (no build tools). If you change the nav, change it in all pages:
