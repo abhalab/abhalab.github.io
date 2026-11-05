@@ -14,6 +14,7 @@ privacy.html        What the site does (and doesn't) collect
 CNAME               abha-lab.in (tells GitHub Pages your domain)
 .nojekyll           Serve files as-is, skip Jekyll
 assets/style.css    All styling; colours are tokens at the top
+assets/theme.css    Colour theme (warm light palette, per-theme accents); loaded after style.css
 assets/fonts/       Mukta (Latin + Devanagari), SIL Open Font License
 assets/favicon.svg
 ```

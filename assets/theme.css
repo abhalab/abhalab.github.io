@@ -1,0 +1,85 @@
+/* ABHA Lab — colour theme. Loaded after style.css and overrides its colours only.
+   Warm, light, natural palette with one accent per research theme.
+   Delete the <link> to theme.css in each page to go back to the original look. */
+
+/* ---------- Tokens ----------
+   The selector below always matches and is as specific as style.css's dark-mode
+   selectors, so these light tokens win in every case (light theme for everyone). */
+:root:not([data-theme="__none"]) {
+  --paper:     #FBF8F2;   /* ivory page ground */
+  --surface:   #FFFFFF;   /* cards */
+  --sunken:    #F3EDE3;   /* sand panels */
+  --ink:       #1E2B26;   /* deep forest ink */
+  --muted:     #56605A;
+  --faint:     #7E857D;
+  --rule:      #E6DED1;
+  --grid:      #DDD4C5;   /* hex grid lines */
+  --glow:      #C98A1E;   /* आभा — lamp-light amber */
+  --glow-ink:  #8C5A12;
+  --glow-soft: #F8EBD2;
+  --link:      #1C6762;
+  --band:      #23413A;   /* forest top bar */
+  --terra: #A2462A; --terra-soft: #F7E1D6;   /* mobility */
+  --teal:  #1A6669; --teal-soft:  #D9EDEC;   /* wireless */
+  --ochre: #8C5A12; --ochre-soft: #F8EBD2;   /* anonymisation */
+  --sage:  #44702F; --sage-soft:  #E3EEDA;   /* health */
+  --plum:  #6E4479; --plum-soft:  #EFE4F2;   /* network & IoT */
+  --shadow: 0 1px 2px rgba(60,45,20,.05), 0 10px 28px -14px rgba(60,45,20,.22);
+  color-scheme: light;
+}
+
+/* Accent helpers: give a component its own colour. */
+.a-terra { --accent: var(--terra); --accent-soft: var(--terra-soft); }
+.a-teal  { --accent: var(--teal);  --accent-soft: var(--teal-soft); }
+.a-ochre { --accent: var(--ochre); --accent-soft: var(--ochre-soft); }
+.a-sage  { --accent: var(--sage);  --accent-soft: var(--sage-soft); }
+.a-plum  { --accent: var(--plum);  --accent-soft: var(--plum-soft); }
+
+/* ---------- Buttons and pills ---------- */
+.btn-primary { background: var(--teal); color: #FFFFFF; }
+.btn-primary:hover { background: #134F52; }
+.btn-ghost { background: var(--surface); }
+.pill[class*="a-"] { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
+
+/* ---------- Hero (light) ---------- */
+.hero { border-bottom: 1px solid var(--rule);
+  background: radial-gradient(900px 420px at 88% 10%, var(--teal-soft), transparent 70%),
+              radial-gradient(800px 420px at 0% 100%, var(--glow-soft), transparent 70%), var(--paper); }
+.hero-name .dev { color: #B8741A; }
+.hero figure { background: var(--surface); box-shadow: var(--shadow); }
+.hx-path { stroke: var(--terra); }
+
+/* ---------- Page heads ---------- */
+.page-head { background:
+  radial-gradient(900px 320px at 90% -30%, var(--teal-soft), transparent 70%),
+  radial-gradient(700px 260px at 55% -60%, var(--glow-soft), transparent 70%), var(--surface); }
+
+/* ---------- Theme accents on cards, icons and labels ---------- */
+.icon { background: var(--accent-soft, var(--glow-soft)); color: var(--accent, var(--glow-ink)); }
+.card[class*="a-"] { border-top: 3px solid var(--accent); }
+a.card[class*="a-"]:hover { border-color: var(--accent); }
+.card[class*="a-"] .more, .theme-block[class*="a-"] .eyebrow { color: var(--accent); }
+
+/* Interest tags cycle through the palette */
+.tags li:nth-child(5n+1) { background: var(--terra-soft); color: var(--terra); }
+.tags li:nth-child(5n+2) { background: var(--teal-soft);  color: var(--teal); }
+.tags li:nth-child(5n+3) { background: var(--ochre-soft); color: var(--ochre); }
+.tags li:nth-child(5n+4) { background: var(--plum-soft);  color: var(--plum); }
+.tags li:nth-child(5n+5) { background: var(--sage-soft);  color: var(--sage); }
+
+/* Approach / application steps */
+.steps li:nth-child(3n+1) { border-top: 3px solid var(--terra); }
+.steps li:nth-child(3n+1)::before { color: var(--terra); }
+.steps li:nth-child(3n+2) { border-top: 3px solid var(--teal); }
+.steps li:nth-child(3n+2)::before { color: var(--teal); }
+.steps li:nth-child(3n+3) { border-top: 3px solid var(--sage); }
+.steps li:nth-child(3n+3)::before { color: var(--sage); }
+
+/* ---------- People ---------- */
+.hexavatar { background: radial-gradient(circle at 50% 40%, #35604F, #1E3A32 70%); color: #F2C46B; }
+.member.open .plus { background: var(--sage-soft); color: var(--sage); }
+
+/* ---------- Callout, banner, footer ---------- */
+.callout { border-left-color: var(--teal); background: var(--teal-soft); }
+.cta { background: linear-gradient(120deg, var(--teal-soft), var(--sage-soft) 55%, var(--glow-soft)); border: 1px solid var(--rule); }
+.site-foot { background: var(--sunken); border-top: 1px solid var(--rule); }
