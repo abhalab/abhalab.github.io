@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Making Local Differential Privacy Practical — Abhishek Mishra</title>
+<meta name="description" content="Local Differential Privacy (LDP) is a powerful framework that provides strong, formal privacy guarantees without requiring a trusted curator. This makes it">
+<meta name="theme-color" content="#23413A">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="stylesheet" href="../../assets/theme.css">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar on-band">
+  <div class="wrap">
+    <span>Department of Computer Science and Engineering · <a href="https://www.iitjammu.ac.in/">Indian Institute of Technology (IIT) Jammu</a></span>
+    <a class="contact" href="mailto:abhishek.mishra@iitjammu.ac.in">abhishek.mishra@iitjammu.ac.in</a>
+  </div>
+</div>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../../index.html"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><polygon points="16,2 28.1,9 28.1,23 16,30 3.9,23 3.9,9"/><circle cx="16" cy="16" r="5"/></svg><span class="brand-text"><b>ABHA Lab</b><small>Anonymity for Bharat · <span lang="hi">आभा</span></small></span></a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../research.html">Research</a></li>
+        <li><a href="../../people.html" aria-current="page">People</a></li>
+        <li><a href="../../publications.html">Publications</a></li>
+        <li><a href="../../news.html">News</a></li>
+        <li class="nav-cta"><a href="../../join.html">Join us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-head profile-head">
+  <div class="wrap">
+    <div class="profile-id">
+      <div class="hexavatar"><img src="../../assets/miishra.jpeg" alt="Portrait of Dr. Abhishek Mishra" width="290" height="290"></div>
+      <div>
+        <span class="eyebrow"><a href="../../people.html">People</a> · Principal investigator</span>
+        <h1>Dr. Abhishek Mishra</h1>
+        <p>Assistant Professor, Department of Computer Science and Engineering, IIT Jammu · Lead, <a href="../../index.html">ABHA Lab</a></p>
+        <ul class="links">
+          <li><a href="mailto:abhishek.mishra@iitjammu.ac.in">Email</a></li>
+          <li><a href="https://scholar.google.fr/citations?hl=en&amp;user=4d47gF4AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Google Scholar</a></li>
+          <li><a href="https://orcid.org/0000-0003-1778-6794">ORCID</a></li>
+          <li><a href="https://github.com/miishra">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/abmi17">LinkedIn</a></li>
+          <li><a href="https://www.twitter.com/abhimshra">X / Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<nav class="subnav" aria-label="Profile sections">
+  <div class="wrap">
+    <ul>
+        <li><a href="../index.html">Profile</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="../notes.html" aria-current="page">Research notes</a></li>
+        <li><a href="../service.html">Service &amp; teaching</a></li>
+    </ul>
+  </div>
+</nav>
+
+<article class="section">
+  <div class="wrap prose note">
+    <p class="note-meta"><a href="../notes.html">← All research notes</a> · <time datetime="2025-11-27">27 November 2025</time></p>
+    <h2 class="note-title">Making Local Differential Privacy Practical</h2>
+    <div class="note-body">
+<p>Local Differential Privacy (LDP) is a powerful framework that provides strong, formal privacy guarantees without requiring a trusted curator. This makes it an attractive approach for privacy-preserving data collection and analysis across distributed systems. However, despite decades of research, practitioners often struggle with a fundamental challenge: <strong>how do you actually tune LDP parameters in practice?</strong></p>
+
+<h3>The Problem: Theory vs. Practice</h3>
+
+<p>LDP offers strong theoretical guarantees, but the gap between theory and practice is significant. When deploying LDP, practitioners face critical questions:</p>
+
+<ul>
+  <li>What privacy loss (ε) is appropriate for my use case?</li>
+  <li>How much will my data utility degrade?</li>
+  <li>What’s the actual vulnerability to attacks?</li>
+  <li>How do these parameters interact with real-world datasets?</li>
+</ul>
+
+<p>Without clear answers, organizations hesitate to adopt LDP, even though it addresses critical privacy concerns.</p>
+
+<h3>Introducing LDP-Toolbox</h3>
+
+<p>Researchers have just released <strong>LDP-Toolbox</strong>, the first interactive, web-based toolbox designed to bridge this gap. It’s an open-source Python implementation that provides:</p>
+
+<h3>Key Features</h3>
+
+<p><strong>1. Interactive Trade-off Visualization</strong></p>
+<ul>
+  <li>Explore the relationship between privacy loss (ε), utility loss, and vulnerability to attacks</li>
+  <li>Visualize these trade-offs dynamically as you adjust parameters</li>
+  <li>Make informed decisions with intuitive, visual insights</li>
+</ul>
+
+<p><strong>2. Real-World Dataset Support</strong></p>
+<ul>
+  <li>Test with datasets from different domains</li>
+  <li>Focus on discrete personal attributes and location-based scenarios</li>
+  <li>See how privacy-utility trade-offs vary across real data</li>
+</ul>
+
+<p><strong>3. Practical Parameter Tuning</strong></p>
+<ul>
+  <li>Lower the barrier to deploying LDP in real applications</li>
+  <li>Understand the concrete impact of parameter choices on your specific data</li>
+  <li>Bridge the gap between theoretical guarantees and practical adoption</li>
+</ul>
+
+<h3>How It Works</h3>
+
+<p>The toolbox allows you to:</p>
+<ol>
+  <li>Load or select a dataset (discrete attributes or location data)</li>
+  <li>Specify an LDP mechanism and privacy budget (ε)</li>
+  <li>Visualize the resulting utility loss and attack vulnerability</li>
+  <li>Explore alternative parameters interactively to find the right balance for your use case</li>
+</ol>
+
+<h3>Why This Matters</h3>
+
+<p>LDP is increasingly important for:</p>
+<ul>
+  <li><strong>Federated learning systems</strong> where data never leaves the user’s device</li>
+  <li><strong>Crowdsourced data collection</strong> where privacy is paramount</li>
+  <li><strong>Regulatory compliance</strong> (GDPR, CCPA, etc.) without sacrificing utility</li>
+  <li><strong>Trust-free scenarios</strong> where no central authority can be trusted with raw data</li>
+</ul>
+
+<p>But without practical tools, LDP adoption remains limited. LDP-Toolbox aims to change that.</p>
+
+<h3>Get Started</h3>
+
+<p>The toolbox is <strong>open-source and free</strong> to use:</p>
+
+<ul>
+  <li><strong>PyPI Package</strong>: <a href="https://pypi.org/project/ldp-toolbox">ldp-toolbox</a></li>
+  <li><strong>GitHub Repository</strong>: <a href="https://github.com/hharcolezi/ldp-toolbox">https://github.com/hharcolezi/ldp-toolbox</a></li>
+  <li><strong>Video Demo</strong>: Available on the GitHub repository</li>
+  <li><strong>Paper</strong>: <a href="https://dl.acm.org/doi/10.1145/3719027.3760706">https://dl.acm.org/doi/10.1145/3719027.3760706</a></li>
+</ul>
+
+<h3>Implications</h3>
+
+<p>This tool democratizes LDP. It transforms LDP from an abstract theoretical concept into a practical, usable framework that even non-experts can understand and deploy. By providing clear visual trade-offs, it empowers practitioners to make privacy decisions confidently.</p>
+
+<p>For anyone working on privacy-preserving systems, federated learning, or sensitive data analysis, LDP-Toolbox is worth exploring. It’s a step forward in making privacy practical.</p>
+    </div>
+    <aside class="callout related">
+      <h3 class="label-h">Related publication</h3>
+      <ol class="pubs compact"><li class="pub">
+  <div class="pub-badge"><b>CCS</b><span>2025</span></div>
+  <div><span class="pub-title">Exploring Utility and Attackability Trade-offs in Local Differential Privacy</span><span class="pub-authors">Haoying Zhang, <span class="me">Abhishek Mishra</span>, Héber Hwang Arcolezi</span><span class="pub-venue"><em>ACM CCS</em>, 2025 (demo).</span><div class="pub-meta"><a href="../../assets/papers/2025-ccs-exploring-utility-and-attackability.pdf">PDF</a><a href="https://doi.org/10.1145/3719027.3760706">DOI</a></div></div>
+</li></ol>
+    </aside>
+    <nav class="pager" aria-label="More notes"><a href="dns-guidelines.html"><small>Older</small>Drafting DNS Security and Privacy Guidelines</a><a class="next" href="k-scale.html"><small>Newer</small>k-Anonymizing Millions of Trajectories</a></nav>
+  </div>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="../../index.html"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><polygon points="16,2 28.1,9 28.1,23 16,30 3.9,23 3.9,9"/><circle cx="16" cy="16" r="5"/></svg><span class="brand-text"><b>ABHA Lab</b><small>Anonymity for Bharat · <span lang="hi">आभा</span></small></span></a>
+      <p>Privacy research for the systems India runs on.</p>
+      <address>Department of Computer Science and Engineering<br>Indian Institute of Technology Jammu<br>Jagti, PO Nagrota, NH-44, Jammu 181221, India</address>
+    </div>
+    <nav aria-label="Footer">
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="../../research.html">Research</a></li>
+        <li><a href="../../people.html">People</a></li>
+        <li><a href="../../publications.html">Publications</a></li>
+        <li><a href="../../news.html">News</a></li>
+        <li><a href="../../join.html">Join us</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="mailto:abhishek.mishra@iitjammu.ac.in">abhishek.mishra@iitjammu.ac.in</a></li>
+        <li><a href="https://orcid.org/0000-0003-1778-6794">ORCID</a></li>
+        <li><a href="https://github.com/miishra">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-base">
+    <p>© 2026 ABHA Lab, IIT Jammu</p>
+    <p>No cookies, no analytics, no third-party requests. <a href="../../privacy.html">How this site handles your data</a></p>
+  </div>
+</footer>
+</body>
+</html>

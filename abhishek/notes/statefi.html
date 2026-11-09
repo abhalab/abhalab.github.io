@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StateFi: Fingerprinting Wi-Fi Devices using State Machines — Abhishek Mishra</title>
+<meta name="description" content="Randomized MAC addresses are widely deployed to prevent passive Wi-Fi device tracking. However, real-world devices still emit structured behavioral pattern">
+<meta name="theme-color" content="#23413A">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="stylesheet" href="../../assets/theme.css">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar on-band">
+  <div class="wrap">
+    <span>Department of Computer Science and Engineering · <a href="https://www.iitjammu.ac.in/">Indian Institute of Technology (IIT) Jammu</a></span>
+    <a class="contact" href="mailto:abhishek.mishra@iitjammu.ac.in">abhishek.mishra@iitjammu.ac.in</a>
+  </div>
+</div>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../../index.html"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><polygon points="16,2 28.1,9 28.1,23 16,30 3.9,23 3.9,9"/><circle cx="16" cy="16" r="5"/></svg><span class="brand-text"><b>ABHA Lab</b><small>Anonymity for Bharat · <span lang="hi">आभा</span></small></span></a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../research.html">Research</a></li>
+        <li><a href="../../people.html" aria-current="page">People</a></li>
+        <li><a href="../../publications.html">Publications</a></li>
+        <li><a href="../../news.html">News</a></li>
+        <li class="nav-cta"><a href="../../join.html">Join us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-head profile-head">
+  <div class="wrap">
+    <div class="profile-id">
+      <div class="hexavatar"><img src="../../assets/miishra.jpeg" alt="Portrait of Dr. Abhishek Mishra" width="290" height="290"></div>
+      <div>
+        <span class="eyebrow"><a href="../../people.html">People</a> · Principal investigator</span>
+        <h1>Dr. Abhishek Mishra</h1>
+        <p>Assistant Professor, Department of Computer Science and Engineering, IIT Jammu · Lead, <a href="../../index.html">ABHA Lab</a></p>
+        <ul class="links">
+          <li><a href="mailto:abhishek.mishra@iitjammu.ac.in">Email</a></li>
+          <li><a href="https://scholar.google.fr/citations?hl=en&amp;user=4d47gF4AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Google Scholar</a></li>
+          <li><a href="https://orcid.org/0000-0003-1778-6794">ORCID</a></li>
+          <li><a href="https://github.com/miishra">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/abmi17">LinkedIn</a></li>
+          <li><a href="https://www.twitter.com/abhimshra">X / Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<nav class="subnav" aria-label="Profile sections">
+  <div class="wrap">
+    <ul>
+        <li><a href="../index.html">Profile</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="../notes.html" aria-current="page">Research notes</a></li>
+        <li><a href="../service.html">Service &amp; teaching</a></li>
+    </ul>
+  </div>
+</nav>
+
+<article class="section">
+  <div class="wrap prose note">
+    <p class="note-meta"><a href="../notes.html">← All research notes</a> · <time datetime="2026-02-16">16 February 2026</time></p>
+    <h2 class="note-title">StateFi: Fingerprinting Wi-Fi Devices using State Machines</h2>
+    <div class="note-body">
+<p>Randomized MAC addresses are widely deployed to prevent passive Wi-Fi device tracking. However, real-world devices still emit structured behavioral patterns in management traffic that persist across sessions and environments. We show that device behavior itself forms a powerful fingerprinting side channel, even when explicit identifiers are aggressively randomized.</p>
+
+<p>Most prior Wi-Fi fingerprinting techniques rely on syntactic features such as Information Elements (IEs), sequence numbers (SEQ), or RSSI correlations. These approaches degrade in dense environments and fail under strong randomization, as they overlook the underlying logic of device behavior.</p>
+
+<h3>Behavioral modeling</h3>
+
+<p>StateFi models each device’s activity as a <strong>finite-state machine (FSM)</strong> that captures:</p>
+
+<ul>
+  <li>structural transition patterns</li>
+  <li>temporal execution dynamics</li>
+</ul>
+
+<p>The resulting FSMs are embedded into compact feature vectors enabling scalable similarity measurement and supervised classification.</p>
+
+<h3>Key results</h3>
+
+<p>Across five heterogeneous campus environments and large public datasets,
+StateFi achieves:</p>
+
+<ul>
+  <li><strong>94-97% accuracy</strong> for in-network fingerprinting using full management-frame FSMs</li>
+  <li><strong>Up to 97% re-identification</strong> under MAC randomization using probe-only FSMs</li>
+  <li><strong>98% discrimination accuracy</strong>, outperforming prior signatures by up to <strong>17 percentage points</strong></li>
+</ul>
+
+<h3>Why it matters</h3>
+
+<p>StateFi reveals that randomized identifiers alone are insufficient for privacy protection. Behavioral dynamics in Wi-Fi traffic are stable, distinctive, and resilient to existing defenses, forming a persistent and largely unmitigated tracking channel.</p>
+
+<h3>Paper</h3>
+
+<p><a href="https://hal.science/hal-05487604">Paper</a> appearing in ACM WiSec’26.</p>
+    </div>
+    <aside class="callout related">
+      <h3 class="label-h">Related publication</h3>
+      <ol class="pubs compact"><li class="pub">
+  <div class="pub-badge"><b>WiSec</b><span>2026</span></div>
+  <div><span class="pub-title">StateFi: Effectively Identifying Wi-Fi Devices through State Transitions</span><span class="pub-authors"><span class="me">Abhishek Mishra</span>, Mathieu Cunche</span><span class="pub-venue"><em>ACM Conference on Security and Privacy in Wireless and Mobile Networks (WiSec)</em>, 2026.</span><div class="pub-meta"><a href="../../assets/papers/2026-wisec-statefi.pdf">PDF</a><a href="https://doi.org/10.1145/3765613.3797454">DOI</a><a href="https://hal.science/hal-05487604">HAL</a></div></div>
+</li></ol>
+    </aside>
+    <nav class="pager" aria-label="More notes"><a href="language-matters.html"><small>Older</small>Language of LLMs Itself Shapes Privacy Leakage</a><a class="next" href="aircatch.html"><small>Newer</small>AirCatch: Effectively tracing advanced tag-based trackers</a></nav>
+  </div>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="../../index.html"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><polygon points="16,2 28.1,9 28.1,23 16,30 3.9,23 3.9,9"/><circle cx="16" cy="16" r="5"/></svg><span class="brand-text"><b>ABHA Lab</b><small>Anonymity for Bharat · <span lang="hi">आभा</span></small></span></a>
+      <p>Privacy research for the systems India runs on.</p>
+      <address>Department of Computer Science and Engineering<br>Indian Institute of Technology Jammu<br>Jagti, PO Nagrota, NH-44, Jammu 181221, India</address>
+    </div>
+    <nav aria-label="Footer">
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="../../research.html">Research</a></li>
+        <li><a href="../../people.html">People</a></li>
+        <li><a href="../../publications.html">Publications</a></li>
+        <li><a href="../../news.html">News</a></li>
+        <li><a href="../../join.html">Join us</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="mailto:abhishek.mishra@iitjammu.ac.in">abhishek.mishra@iitjammu.ac.in</a></li>
+        <li><a href="https://orcid.org/0000-0003-1778-6794">ORCID</a></li>
+        <li><a href="https://github.com/miishra">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-base">
+    <p>© 2026 ABHA Lab, IIT Jammu</p>
+    <p>No cookies, no analytics, no third-party requests. <a href="../../privacy.html">How this site handles your data</a></p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>k-Anonymizing Millions of Trajectories — Abhishek Mishra</title>
+<meta name="description" content="Trajectory datasets collected by network operators and service providers contain incredibly rich signals about individual mobility. This richness powers re">
+<meta name="theme-color" content="#23413A">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="stylesheet" href="../../assets/theme.css">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar on-band">
+  <div class="wrap">
+    <span>Department of Computer Science and Engineering · <a href="https://www.iitjammu.ac.in/">Indian Institute of Technology (IIT) Jammu</a></span>
+    <a class="contact" href="mailto:abhishek.mishra@iitjammu.ac.in">abhishek.mishra@iitjammu.ac.in</a>
+  </div>
+</div>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../../index.html"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><polygon points="16,2 28.1,9 28.1,23 16,30 3.9,23 3.9,9"/><circle cx="16" cy="16" r="5"/></svg><span class="brand-text"><b>ABHA Lab</b><small>Anonymity for Bharat · <span lang="hi">आभा</span></small></span></a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../research.html">Research</a></li>
+        <li><a href="../../people.html" aria-current="page">People</a></li>
+        <li><a href="../../publications.html">Publications</a></li>
+        <li><a href="../../news.html">News</a></li>
+        <li class="nav-cta"><a href="../../join.html">Join us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-head profile-head">
+  <div class="wrap">
+    <div class="profile-id">
+      <div class="hexavatar"><img src="../../assets/miishra.jpeg" alt="Portrait of Dr. Abhishek Mishra" width="290" height="290"></div>
+      <div>
+        <span class="eyebrow"><a href="../../people.html">People</a> · Principal investigator</span>
+        <h1>Dr. Abhishek Mishra</h1>
+        <p>Assistant Professor, Department of Computer Science and Engineering, IIT Jammu · Lead, <a href="../../index.html">ABHA Lab</a></p>
+        <ul class="links">
+          <li><a href="mailto:abhishek.mishra@iitjammu.ac.in">Email</a></li>
+          <li><a href="https://scholar.google.fr/citations?hl=en&amp;user=4d47gF4AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Google Scholar</a></li>
+          <li><a href="https://orcid.org/0000-0003-1778-6794">ORCID</a></li>
+          <li><a href="https://github.com/miishra">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/abmi17">LinkedIn</a></li>
+          <li><a href="https://www.twitter.com/abhimshra">X / Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<nav class="subnav" aria-label="Profile sections">
+  <div class="wrap">
+    <ul>
+        <li><a href="../index.html">Profile</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="../notes.html" aria-current="page">Research notes</a></li>
+        <li><a href="../service.html">Service &amp; teaching</a></li>
+    </ul>
+  </div>
+</nav>
+
+<article class="section">
+  <div class="wrap prose note">
+    <p class="note-meta"><a href="../notes.html">← All research notes</a> · <time datetime="2025-12-13">13 December 2025</time></p>
+    <h2 class="note-title">k-Anonymizing Millions of Trajectories</h2>
+    <div class="note-body">
+<p>Trajectory datasets collected by network operators and service providers contain incredibly rich signals about individual mobility. This richness powers research and commercial services, but it also makes trajectories highly identifying: even short movement traces can be unique, and simple countermeasures such as pseudonymization do little to mitigate re-identification risks.</p>
+
+<p>In “k-scale: k-Anonymizing Millions of Trajectories” we address a major open problem in privacy-preserving data publishing (PPDP) for mobility data: how to apply k-anonymity at scale to datasets containing millions of user trajectories while preserving record-level accuracy and truthfulness.</p>
+
+<h3>The challenge</h3>
+
+<p>Applying k-anonymity to trajectory datasets is hard for two main reasons:</p>
+
+<ul>
+  <li>Trajectories are high-dimensional and sparse; small differences across records make many traces unique.</li>
+  <li>Large datasets (millions of trajectories) are computationally demanding, and existing methods either don’t scale or severely degrade data utility in the anonymization process.</li>
+</ul>
+
+<h3>The k-scale contribution</h3>
+
+<p>k-scale is a practical framework that brings k-anonymity to massive mobility datasets. The key takeaways are:</p>
+
+<ul>
+  <li>Scalability: k-scale can k-anonymize datasets with on the order of one million trajectories — a two-order-of-magnitude improvement over many previous approaches.</li>
+  <li>Utility preservation: it removes record-level uniqueness while better preserving data quality for downstream tasks than state-of-the-art trajectory-publishing methods.</li>
+  <li>Empirical validation: the framework is evaluated on real-world large country-scale datasets and in realistic application scenarios, showing its ability to balance privacy and utility effectively.</li>
+</ul>
+
+<p>k-scale achieves these outcomes through a careful combination of trajectory abstraction, efficient grouping, and anonymization steps that are tailored to mobility data.</p>
+
+<h3>Why this matters</h3>
+
+<p>Operators and service providers hold vast mobility datasets and are under increasing pressure to share insights while protecting user privacy. k-scale provides a practical, empirically validated path for publishing large-scale mobility traces with provable privacy guarantees (k-anonymity) and competitive utility for analytics.</p>
+
+<h3>Read the paper</h3>
+
+<ul>
+  <li>Paper to appear in IEEE INFOCOM 2026, link: <a href="https://hal.science/hal-05407897">hal-05407897</a></li>
+</ul>
+    </div>
+    <aside class="callout related">
+      <h3 class="label-h">Related publication</h3>
+      <ol class="pubs compact"><li class="pub">
+  <div class="pub-badge"><b>INFOCOM</b><span>2026</span></div>
+  <div><span class="pub-title">k-scale: k-Anonymizing Millions of Trajectories</span><span class="pub-authors"><span class="me">Abhishek Mishra</span>, Marco Fiore</span><span class="pub-venue"><em>IEEE INFOCOM</em>, 2026.</span><div class="pub-meta"><a href="../../assets/papers/2026-infocom-k-scale.pdf">PDF</a><a href="https://doi.org/10.1109/INFOCOM59046.2026.11571660">DOI</a><a href="https://hal.science/hal-05407897">HAL</a></div></div>
+</li></ol>
+    </aside>
+    <nav class="pager" aria-label="More notes"><a href="ldp-toolbox.html"><small>Older</small>Making Local Differential Privacy Practical</a><a class="next" href="language-matters.html"><small>Newer</small>Language of LLMs Itself Shapes Privacy Leakage</a></nav>
+  </div>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="../../index.html"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><polygon points="16,2 28.1,9 28.1,23 16,30 3.9,23 3.9,9"/><circle cx="16" cy="16" r="5"/></svg><span class="brand-text"><b>ABHA Lab</b><small>Anonymity for Bharat · <span lang="hi">आभा</span></small></span></a>
+      <p>Privacy research for the systems India runs on.</p>
+      <address>Department of Computer Science and Engineering<br>Indian Institute of Technology Jammu<br>Jagti, PO Nagrota, NH-44, Jammu 181221, India</address>
+    </div>
+    <nav aria-label="Footer">
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="../../research.html">Research</a></li>
+        <li><a href="../../people.html">People</a></li>
+        <li><a href="../../publications.html">Publications</a></li>
+        <li><a href="../../news.html">News</a></li>
+        <li><a href="../../join.html">Join us</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="mailto:abhishek.mishra@iitjammu.ac.in">abhishek.mishra@iitjammu.ac.in</a></li>
+        <li><a href="https://orcid.org/0000-0003-1778-6794">ORCID</a></li>
+        <li><a href="https://github.com/miishra">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-base">
+    <p>© 2026 ABHA Lab, IIT Jammu</p>
+    <p>No cookies, no analytics, no third-party requests. <a href="../../privacy.html">How this site handles your data</a></p>
+  </div>
+</footer>
+</body>
+</html>

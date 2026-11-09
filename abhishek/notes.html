@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research notes — Abhishek Mishra, IIT Jammu</title>
+<meta name="description" content="Short write-ups of Abhishek Mishra's research papers on privacy and security.">
+<meta name="theme-color" content="#23413A">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/theme.css">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar on-band">
+  <div class="wrap">
+    <span>Department of Computer Science and Engineering · <a href="https://www.iitjammu.ac.in/">Indian Institute of Technology (IIT) Jammu</a></span>
+    <a class="contact" href="mailto:abhishek.mishra@iitjammu.ac.in">abhishek.mishra@iitjammu.ac.in</a>
+  </div>
+</div>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><polygon points="16,2 28.1,9 28.1,23 16,30 3.9,23 3.9,9"/><circle cx="16" cy="16" r="5"/></svg><span class="brand-text"><b>ABHA Lab</b><small>Anonymity for Bharat · <span lang="hi">आभा</span></small></span></a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../research.html">Research</a></li>
+        <li><a href="../people.html" aria-current="page">People</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="../news.html">News</a></li>
+        <li class="nav-cta"><a href="../join.html">Join us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-head profile-head">
+  <div class="wrap">
+    <div class="profile-id">
+      <div class="hexavatar"><img src="../assets/miishra.jpeg" alt="Portrait of Dr. Abhishek Mishra" width="290" height="290"></div>
+      <div>
+        <span class="eyebrow"><a href="../people.html">People</a> · Principal investigator</span>
+        <h1>Dr. Abhishek Mishra</h1>
+        <p>Assistant Professor, Department of Computer Science and Engineering, IIT Jammu · Lead, <a href="../index.html">ABHA Lab</a></p>
+        <ul class="links">
+          <li><a href="mailto:abhishek.mishra@iitjammu.ac.in">Email</a></li>
+          <li><a href="https://scholar.google.fr/citations?hl=en&amp;user=4d47gF4AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Google Scholar</a></li>
+          <li><a href="https://orcid.org/0000-0003-1778-6794">ORCID</a></li>
+          <li><a href="https://github.com/miishra">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/abmi17">LinkedIn</a></li>
+          <li><a href="https://www.twitter.com/abhimshra">X / Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<nav class="subnav" aria-label="Profile sections">
+  <div class="wrap">
+    <ul>
+        <li><a href="index.html">Profile</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="notes.html" aria-current="page">Research notes</a></li>
+        <li><a href="service.html">Service &amp; teaching</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="wrap prose">
+    <p class="lead">Short, plain-language write-ups of my papers: what we found and why it matters.</p>
+    <ul class="note-list">
+      <li class="note-item">
+        <time datetime="2026-08-31">31 August 2026</time>
+        <h3><a href="notes/aircatch.html">AirCatch: Effectively tracing advanced tag-based trackers</a></h3>
+        <p>Tag-based tracking ecosystems help users find lost keys and luggage, but the same infrastructure can be turned against people for stalking. Every deployed defense — Apple’s unwanted tracking alerts, the Google/Apple DULT specification, and prior academic detectors — rests on the same assumption: that a rogue tag exposes a stable identifier, or at least beacons in a predictable way. That assumption does not survive contact with an adversary who simply rotates identifiers aggressively. We show that identifier-based defenses break down entirely against such trackers, and that a physical-layer property closes the gap.</p>
+        <a class="more" href="notes/aircatch.html">Read more →</a>
+      </li>
+      <li class="note-item">
+        <time datetime="2026-02-16">16 February 2026</time>
+        <h3><a href="notes/statefi.html">StateFi: Fingerprinting Wi-Fi Devices using State Machines</a></h3>
+        <p>Randomized MAC addresses are widely deployed to prevent passive Wi-Fi device tracking. However, real-world devices still emit structured behavioral patterns in management traffic that persist across sessions and environments. We show that device behavior itself forms a powerful fingerprinting side channel, even when explicit identifiers are aggressively randomized.</p>
+        <a class="more" href="notes/statefi.html">Read more →</a>
+      </li>
+      <li class="note-item">
+        <time datetime="2026-01-10">10 January 2026</time>
+        <h3><a href="notes/language-matters.html">Language of LLMs Itself Shapes Privacy Leakage</a></h3>
+        <p>Large language models (LLMs) are increasingly deployed in multilingual and sensitive settings, from healthcare and legal assistance to customer support and education. While much of the privacy literature focuses on model size, training data, or attack design, a fundamental question has remained largely unexplored: does the language itself influence privacy leakage in LLMs?</p>
+        <a class="more" href="notes/language-matters.html">Read more →</a>
+      </li>
+      <li class="note-item">
+        <time datetime="2025-12-13">13 December 2025</time>
+        <h3><a href="notes/k-scale.html">k-Anonymizing Millions of Trajectories</a></h3>
+        <p>Trajectory datasets collected by network operators and service providers contain incredibly rich signals about individual mobility. This richness powers research and commercial services, but it also makes trajectories highly identifying: even short movement traces can be unique, and simple countermeasures such as pseudonymization do little to mitigate re-identification risks.</p>
+        <a class="more" href="notes/k-scale.html">Read more →</a>
+      </li>
+      <li class="note-item">
+        <time datetime="2025-11-27">27 November 2025</time>
+        <h3><a href="notes/ldp-toolbox.html">Making Local Differential Privacy Practical</a></h3>
+        <p>Local Differential Privacy (LDP) is a powerful framework that provides strong, formal privacy guarantees without requiring a trusted curator. This makes it an attractive approach for privacy-preserving data collection and analysis across distributed systems. However, despite decades of research, practitioners often struggle with a fundamental challenge: how do you actually tune LDP parameters in practice?</p>
+        <a class="more" href="notes/ldp-toolbox.html">Read more →</a>
+      </li>
+      <li class="note-item">
+        <time datetime="2025-07-26">26 July 2025</time>
+        <h3><a href="notes/dns-guidelines.html">Drafting DNS Security and Privacy Guidelines</a></h3>
+        <p>How should DNS work for billions of IoT devices—and how do we ensure it does so securely and privately?</p>
+        <a class="more" href="notes/dns-guidelines.html">Read more →</a>
+      </li>
+      <li class="note-item">
+        <time datetime="2025-06-14">14 June 2025</time>
+        <h3><a href="notes/breaking-anonymity-at-scale.html">Breaking Anonymity at Scale</a></h3>
+        <p>What does it take to re-identify 100,000 “anonymous” users? In our latest study, we show that anonymized human mobility data isn’t as safe as it seems. By leveraging subtle patterns in location density, movement structure, and temporal activity, we were able to reverse-engineer real trajectories of users at a national scale in Japan.</p>
+        <a class="more" href="notes/breaking-anonymity-at-scale.html">Read more →</a>
+      </li>
+      <li class="note-item">
+        <time datetime="2025-03-30">30 March 2025</time>
+        <h3><a href="notes/qr-codes.html">Think Before You Scan QR codes</a></h3>
+        <p>QR codes are pervasive in modern digital interactions, but despite their convenience, they pose significant privacy risks that are often underestimated. For instance, privacy issues escalate when scanned URLs trigger HTTP redirections involving QR URL shorteners and third-party domains, exposing user data to external entities. However, a comprehensive study of the privacy implications of QR code interactions concerning cookie exploitation and query strings remains lacking in the literature.</p>
+        <a class="more" href="notes/qr-codes.html">Read more →</a>
+      </li>
+      <li class="note-item">
+        <time datetime="2024-07-06">6 July 2024</time>
+        <h3><a href="notes/third-eye.html">Third eye - Inferring the State of Your Smartphone Through Wi-Fi!</a></h3>
+        <p>Wi-Fi is one of the most notable and prevalent wireless technologies today. Smartphones and other Wi-Fi-enabled devices find nearby networks using management frames known as probe-requests. In this paper, we infer the state of smartphones by passively monitoring their transmitted probe-requests.</p>
+        <a class="more" href="notes/third-eye.html">Read more →</a>
+      </li>
+      <li class="note-item">
+        <time datetime="2023-12-16">16 December 2023</time>
+        <h3><a href="notes/mac-derandomization-benchmarks.html">Benchmarks for MAC Derandomization!</a></h3>
+        <p>WiFi-based crowdsensing is a major source of data in a variety of domains such as human-mobility, pollution-level estimation, and, opportunistic networks. MAC randomisation is a backbone for preserving user-privacy in WiFi, as devices change their identifiers (MAC addresses).</p>
+        <a class="more" href="notes/mac-derandomization-benchmarks.html">Read more →</a>
+      </li>
+      <li class="note-item">
+        <time datetime="2021-10-04">4 October 2021</time>
+        <h3><a href="notes/public-wireless-packets.html">Public wireless packets anonymously hurt you</a></h3>
+        <p>With growing privacy concerns over the last decade, two of the most notable wireless technologies – i.e., BLE and WiFi – are  being more and more investigated in terms of privacy vulnerabilities.</p>
+        <a class="more" href="notes/public-wireless-packets.html">Read more →</a>
+      </li>
+      <li class="note-item">
+        <time datetime="2021-07-23">23 July 2021</time>
+        <h3><a href="notes/nemfi.html">Emulation of WiFi with record-and-replay</a></h3>
+        <p>NemFi is a record-and-replay emulator that captures traces representing real WiFi conditions, and later replay these traces  to reproduce the same conditions.</p>
+        <a class="more" href="notes/nemfi.html">Read more →</a>
+      </li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="../index.html"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><polygon points="16,2 28.1,9 28.1,23 16,30 3.9,23 3.9,9"/><circle cx="16" cy="16" r="5"/></svg><span class="brand-text"><b>ABHA Lab</b><small>Anonymity for Bharat · <span lang="hi">आभा</span></small></span></a>
+      <p>Privacy research for the systems India runs on.</p>
+      <address>Department of Computer Science and Engineering<br>Indian Institute of Technology Jammu<br>Jagti, PO Nagrota, NH-44, Jammu 181221, India</address>
+    </div>
+    <nav aria-label="Footer">
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="../research.html">Research</a></li>
+        <li><a href="../people.html">People</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="../news.html">News</a></li>
+        <li><a href="../join.html">Join us</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="mailto:abhishek.mishra@iitjammu.ac.in">abhishek.mishra@iitjammu.ac.in</a></li>
+        <li><a href="https://orcid.org/0000-0003-1778-6794">ORCID</a></li>
+        <li><a href="https://github.com/miishra">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-base">
+    <p>© 2026 ABHA Lab, IIT Jammu</p>
+    <p>No cookies, no analytics, no third-party requests. <a href="../privacy.html">How this site handles your data</a></p>
+  </div>
+</footer>
+</body>
+</html>

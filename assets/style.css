@@ -392,3 +392,69 @@ a.card:hover, .card.hover:hover { border-color: var(--glow); box-shadow: var(--s
 .foot-base p { margin: 0; color: var(--faint); }
 .foot-base a { color: var(--muted); text-decoration: underline; }
 .venue-note { flex-basis: 100%; margin: 0; font-size: .95rem; color: var(--muted); }
+
+/* ---------- Personal pages (abhishek/) ---------- */
+.profile-head { padding-bottom: 40px; }
+.profile-id { display: grid; grid-template-columns: 1fr; gap: 20px 36px; align-items: center; }
+@media (min-width: 700px) { .profile-id { grid-template-columns: 150px 1fr; } }
+.profile-id .hexavatar { width: 150px; }
+.profile-id h1 { margin-bottom: .15em; }
+.profile-id p { font-size: 1.08rem; }
+.profile-id .eyebrow a { color: inherit; text-decoration: none; }
+.profile-id .eyebrow a:hover { text-decoration: underline; }
+.profile-id .links { margin-top: 14px; }
+
+.subnav { position: sticky; top: 61px; z-index: 15; background: var(--surface); border-bottom: 1px solid var(--rule); }
+@media (max-width: 760px) { .subnav { position: static; } }
+.subnav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 4px 24px; overflow-x: auto; }
+.subnav a { display: block; padding: 14px 2px 12px; font-weight: 600; color: var(--muted); text-decoration: none; white-space: nowrap; border-bottom: 3px solid transparent; }
+.subnav a:hover { color: var(--ink); }
+.subnav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--glow); }
+
+.small { font-size: .95rem; color: var(--muted); }
+.tags.big li { font-size: 1rem; padding: .4em 1em; }
+.cv .card p { color: var(--ink); }
+.cv .card p.small { color: var(--muted); }
+.collab-areas .card ul, .teach .card ul.plain { margin: 0; padding-left: 1.1em; color: var(--muted); }
+.collab-areas .card h3 { color: var(--accent, var(--ink)); }
+.teach { grid-template-columns: 1fr; }
+@media (min-width: 640px) { .teach { grid-template-columns: 1fr 1fr; } }
+.teach .card h3 { font-family: var(--serif); font-size: 1.25rem; }
+
+.mini-notes { list-style: none; padding: 0; margin: 0 0 12px; }
+.mini-notes li { padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.mini-notes time { display: block; font-size: .85rem; color: var(--faint); font-weight: 600; }
+.mini-notes a { font-weight: 600; text-decoration: none; color: var(--ink); }
+.mini-notes a:hover { color: var(--link); text-decoration: underline; }
+
+.kv { display: grid; grid-template-columns: 7.5rem 1fr; gap: 12px 16px; margin: 0; }
+.kv dt { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: var(--faint); padding-top: 4px; }
+.kv dd { margin: 0; }
+.kv code { font-size: .9rem; word-break: break-word; }
+@media (max-width: 520px) { .kv { grid-template-columns: 1fr; gap: 2px; } .kv dd { margin-bottom: 12px; } }
+
+.note-list { list-style: none; padding: 0; margin: 0; }
+.note-item { padding: 26px 0; border-bottom: 1px solid var(--rule); }
+.note-item:first-child { padding-top: 8px; }
+.note-item time { font-size: .88rem; font-weight: 600; color: var(--faint); }
+.note-item h3 { font-family: var(--serif); font-size: 1.45rem; font-weight: 600; margin: 4px 0 8px; }
+.note-item h3 a { color: var(--ink); text-decoration: none; }
+.note-item h3 a:hover { color: var(--link); text-decoration: underline; }
+.note-item p { color: var(--muted); margin-bottom: 8px; }
+
+.note-meta { color: var(--faint); font-size: .95rem; }
+.note-meta a { font-weight: 600; text-decoration: none; }
+.note-title { font-size: clamp(1.8rem, 3.6vw, 2.5rem); margin: 8px 0 24px; }
+.note-body { font-size: 1.08rem; }
+.note-body h3 { font-family: var(--serif); font-size: 1.4rem; font-weight: 600; margin: 1.6em 0 .5em; }
+.note-body ul, .note-body ol { padding-left: 1.3em; margin: 0 0 1em; }
+.note-body li { margin-bottom: .35em; }
+.related { margin-top: 40px; }
+.related .pubs.compact .pub { padding: 8px 0 0; border-bottom: 0; }
+.pager { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--rule); }
+.pager a { display: block; text-decoration: none; color: var(--ink); font-weight: 600; line-height: 1.35; padding: 14px 16px; border: 1px solid var(--rule); border-radius: 10px; background: var(--surface); }
+.pager a:hover { border-color: var(--glow); }
+.pager a.next { text-align: right; }
+.pager small { display: block; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); margin-bottom: 4px; }
+@media (max-width: 520px) { .pager { grid-template-columns: 1fr; } .pager a.next { text-align: left; } }
+.timeline + .label-h { margin-top: 28px; }

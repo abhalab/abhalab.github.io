@@ -10,6 +10,12 @@ publications.html   Full list by year, topic filter (CSS only), jump-to-year sid
 news.html           Full news archive, grouped by year
 join.html           Openings, how to apply, FAQ
 privacy.html        What the site does (and doesn't) collect
+abhishek/           PI's personal pages (ported from miishra.github.io)
+  index.html          Profile: about, interests, positions, education, collaborations, updates, contact
+  publications.html   Full personal publication list (all years) with PDFs
+  notes.html          Research notes index; notes/*.html are the individual write-ups
+  service.html        Reviewing, standardisation, teaching, open-source software
+assets/papers/      Paper PDFs, named <year>-<venue>-<title>.pdf
 404.html            Not-found page
 CNAME               abha-lab.in (tells GitHub Pages your domain)
 .nojekyll           Serve files as-is, skip Jekyll
@@ -51,6 +57,7 @@ If you use a different org name, change `abha-lab.github.io` in steps 1, 2 and 4
 - **Add a paper:** copy one `<li class="pub ...">` in `publications.html` under the right year, and give it a unique `id`. Topic classes drive the filter: `t-mob` (mobility), `t-wl` (wireless), `t-anon` (anonymisation), `t-net` (network & IoT); add matching `<span class="pill">` tags. Wrap your name in `<span class="me">`. Update the counts in the filter chips, the year sidebar and the total.
 - **Add a student:** in `people.html`, copy the commented member-card template into the `.members` list. Remove an "Open" card once that position is filled.
 - **Add a photo:** put it in `assets/` and replace the initials inside `.hexavatar` with `<img src="assets/name.jpg" alt="">`.
+- **Personal pages:** pages in `abhishek/` link up one level (`../`), and pages in `abhishek/notes/` two levels (`../../`). To add a research note, copy an existing file in `abhishek/notes/`, then add it to `abhishek/notes.html` and to the "Older/Newer" links of its neighbours.
 - **New page:** copy `privacy.html`, change the `<title>`, the `aria-current` link and the `<main>` content, then add it to the nav in every page.
 
 Header and footer are repeated in each file on purpose (no build tools). If you change the nav, change it in all pages:

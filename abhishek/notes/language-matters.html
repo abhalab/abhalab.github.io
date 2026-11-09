@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Language of LLMs Itself Shapes Privacy Leakage — Abhishek Mishra</title>
+<meta name="description" content="Large language models (LLMs) are increasingly deployed in multilingual and sensitive settings, from healthcare and legal assistance to customer support and">
+<meta name="theme-color" content="#23413A">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="stylesheet" href="../../assets/theme.css">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar on-band">
+  <div class="wrap">
+    <span>Department of Computer Science and Engineering · <a href="https://www.iitjammu.ac.in/">Indian Institute of Technology (IIT) Jammu</a></span>
+    <a class="contact" href="mailto:abhishek.mishra@iitjammu.ac.in">abhishek.mishra@iitjammu.ac.in</a>
+  </div>
+</div>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../../index.html"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><polygon points="16,2 28.1,9 28.1,23 16,30 3.9,23 3.9,9"/><circle cx="16" cy="16" r="5"/></svg><span class="brand-text"><b>ABHA Lab</b><small>Anonymity for Bharat · <span lang="hi">आभा</span></small></span></a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../research.html">Research</a></li>
+        <li><a href="../../people.html" aria-current="page">People</a></li>
+        <li><a href="../../publications.html">Publications</a></li>
+        <li><a href="../../news.html">News</a></li>
+        <li class="nav-cta"><a href="../../join.html">Join us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-head profile-head">
+  <div class="wrap">
+    <div class="profile-id">
+      <div class="hexavatar"><img src="../../assets/miishra.jpeg" alt="Portrait of Dr. Abhishek Mishra" width="290" height="290"></div>
+      <div>
+        <span class="eyebrow"><a href="../../people.html">People</a> · Principal investigator</span>
+        <h1>Dr. Abhishek Mishra</h1>
+        <p>Assistant Professor, Department of Computer Science and Engineering, IIT Jammu · Lead, <a href="../../index.html">ABHA Lab</a></p>
+        <ul class="links">
+          <li><a href="mailto:abhishek.mishra@iitjammu.ac.in">Email</a></li>
+          <li><a href="https://scholar.google.fr/citations?hl=en&amp;user=4d47gF4AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Google Scholar</a></li>
+          <li><a href="https://orcid.org/0000-0003-1778-6794">ORCID</a></li>
+          <li><a href="https://github.com/miishra">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/abmi17">LinkedIn</a></li>
+          <li><a href="https://www.twitter.com/abhimshra">X / Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<nav class="subnav" aria-label="Profile sections">
+  <div class="wrap">
+    <ul>
+        <li><a href="../index.html">Profile</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="../notes.html" aria-current="page">Research notes</a></li>
+        <li><a href="../service.html">Service &amp; teaching</a></li>
+    </ul>
+  </div>
+</nav>
+
+<article class="section">
+  <div class="wrap prose note">
+    <p class="note-meta"><a href="../notes.html">← All research notes</a> · <time datetime="2026-01-10">10 January 2026</time></p>
+    <h2 class="note-title">Language of LLMs Itself Shapes Privacy Leakage</h2>
+    <div class="note-body">
+<p>Large language models (LLMs) are increasingly deployed in multilingual and sensitive settings, from healthcare and legal assistance to customer support and education. While much of the privacy literature focuses on model size, training data, or attack design, a fundamental question has remained largely unexplored: <strong>does the language itself influence privacy leakage in LLMs?</strong></p>
+
+<p>In <em>“The Model’s Language Matters: A Comparative Privacy Analysis of LLMs”</em>, accepted to <strong>EACL 2026</strong>, we provide the first quantitative evidence that <strong>linguistic structure plays a decisive role in shaping privacy risks</strong>.</p>
+
+<h3>The challenge</h3>
+
+<p>Privacy risks in LLMs—such as training data extraction or memorization—are often studied in a language-agnostic way. However, languages differ substantially in their morphology, syntax, redundancy, and tokenization behavior. This raises two key challenges:</p>
+
+<ul>
+  <li>It is unclear whether privacy vulnerabilities observed in English-centric studies generalize to other languages.</li>
+  <li>Existing privacy defenses implicitly assume that a single mechanism will work uniformly well across languages.</li>
+</ul>
+
+<p>Without understanding the role of language, multilingual deployments risk uneven and poorly understood privacy guarantees.</p>
+
+<h3>Our contribution</h3>
+
+<p>We conduct a systematic, cross-lingual privacy analysis of LLMs across <strong>four languages</strong>—English, Italian, French, and Spanish—using <strong>three major attack families</strong>:</p>
+
+<ul>
+  <li><strong>Extraction attacks</strong></li>
+  <li><strong>Counterfactual memorization attacks</strong></li>
+  <li><strong>Membership inference attacks</strong></li>
+</ul>
+
+<p>Our main findings show a striking and consistent pattern:</p>
+
+<ul>
+  <li><strong>English and Italian exhibit higher privacy leakage</strong>, driven by greater redundancy, longer lexical units, and more predictable syntactic structures.</li>
+  <li><strong>French and Spanish are more privacy-resilient</strong>, where higher morphological complexity and structural diversity naturally dampen memorization and inference.</li>
+  <li><strong>Linguistic properties</strong>—including redundancy, tokenization granularity, and syntactic regularity—consistently explain vulnerability patterns <em>across all attack types</em>.</li>
+</ul>
+
+<p>In short, <strong>privacy risks closely track linguistic structure</strong>, not just model architecture or training scale.</p>
+
+<h3>Why this matters</h3>
+
+<p>These results have important implications for the design and deployment of multilingual LLMs:</p>
+
+<ul>
+  <li>Privacy evaluations must move beyond English-only benchmarks.</li>
+  <li>Language-aware privacy-preserving mechanisms are necessary, especially in <strong>high-stakes domains like healthcare</strong>.</li>
+  <li>A one-size-fits-all approach to LLM privacy can lead to systematically weaker protection for speakers of certain languages.</li>
+</ul>
+
+<p>Our work highlights language as a <strong>first-class dimension</strong> in LLM privacy analysis and mitigation.</p>
+
+<h3>Read the paper</h3>
+
+<ul>
+  <li><a href="https://hal.science/hal-05475921v1/file/252_The_Model_s_Language_Matter_Camera_Ready.pdf">Preprint</a></li>
+  <li>To appear at <strong>EACL 2026 (European Chapter of the Association for Computational Linguistics)</strong></li>
+</ul>
+    </div>
+    <aside class="callout related">
+      <h3 class="label-h">Related publication</h3>
+      <ol class="pubs compact"><li class="pub">
+  <div class="pub-badge"><b>EACL</b><span>2026</span></div>
+  <div><span class="pub-title">The Model’s Language Matters: A Comparative Privacy Analysis of LLMs</span><span class="pub-authors"><span class="me">Abhishek Mishra</span>, Antoine Boutet, Lucas Magnana</span><span class="pub-venue"><em>European Chapter of the Association for Computational Linguistics (EACL)</em>, 2026.</span><div class="pub-meta"><a href="../../assets/papers/2026-eacl-the-model-s-language-matters.pdf">PDF</a><a href="https://hal.science/hal-05475921v1/file/252_The_Model_s_Language_Matter_Camera_Ready.pdf">HAL</a></div></div>
+</li></ol>
+    </aside>
+    <nav class="pager" aria-label="More notes"><a href="k-scale.html"><small>Older</small>k-Anonymizing Millions of Trajectories</a><a class="next" href="statefi.html"><small>Newer</small>StateFi: Fingerprinting Wi-Fi Devices using State Machines</a></nav>
+  </div>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="../../index.html"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><polygon points="16,2 28.1,9 28.1,23 16,30 3.9,23 3.9,9"/><circle cx="16" cy="16" r="5"/></svg><span class="brand-text"><b>ABHA Lab</b><small>Anonymity for Bharat · <span lang="hi">आभा</span></small></span></a>
+      <p>Privacy research for the systems India runs on.</p>
+      <address>Department of Computer Science and Engineering<br>Indian Institute of Technology Jammu<br>Jagti, PO Nagrota, NH-44, Jammu 181221, India</address>
+    </div>
+    <nav aria-label="Footer">
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="../../research.html">Research</a></li>
+        <li><a href="../../people.html">People</a></li>
+        <li><a href="../../publications.html">Publications</a></li>
+        <li><a href="../../news.html">News</a></li>
+        <li><a href="../../join.html">Join us</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="mailto:abhishek.mishra@iitjammu.ac.in">abhishek.mishra@iitjammu.ac.in</a></li>
+        <li><a href="https://orcid.org/0000-0003-1778-6794">ORCID</a></li>
+        <li><a href="https://github.com/miishra">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-base">
+    <p>© 2026 ABHA Lab, IIT Jammu</p>
+    <p>No cookies, no analytics, no third-party requests. <a href="../../privacy.html">How this site handles your data</a></p>
+  </div>
+</footer>
+</body>
+</html>
